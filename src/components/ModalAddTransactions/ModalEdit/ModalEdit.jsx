@@ -25,7 +25,6 @@ const ModalAdd = ({ handleSubmitForm }) => {
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
 
-
   useEffect(() => {
     dispatch(fetchTransactionCategories());
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -61,7 +60,7 @@ const ModalAdd = ({ handleSubmitForm }) => {
     <ModalBox>
       <ModalTitle>Edit transactions</ModalTitle>
       <StyledTypebox>
-        <StileIncome type={type}>Incom </StileIncome>/
+        <StileIncome type={type}>Income </StileIncome>/
         <StileExpense type={type}>Expense</StileExpense>
       </StyledTypebox>
       <Formik
@@ -84,7 +83,7 @@ const ModalAdd = ({ handleSubmitForm }) => {
                   placeholder="Select a category"
                   defaultValue={categoryId}
                   as="select"
-                  disabled = {true}
+                  disabled={true}
                   onChange={event => {
                     setFieldValue('categoryId', event.target.value);
                   }}
