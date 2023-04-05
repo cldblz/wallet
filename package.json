@@ -2,7 +2,7 @@
   "name": "wallet-react-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hollyundead.github.io/Wallet-react-project/",
+  "homepage": "https://cldblz.github.io/wallet/",
   "dependencies": {
     "@emotion/css": "^11.10.6",
     "@reduxjs/toolkit": "^1.9.3",
