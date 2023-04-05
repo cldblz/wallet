@@ -2,15 +2,12 @@ import { Outlet } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { Balance } from 'components/Balance/Balance';
 import { Navigation } from 'components/Navigation/Navigation';
-
 import { Header } from 'components/Header/Header';
-
 import backgroundDesktop from '../../img/bg-images/bg-image-desktop.png';
 import backgroundTablet from '../../img/bg-images/bg-image-tablet.png';
 import backgroundDesktopRetina from '../../img/bg-images/bg-image-desktop-2x.png';
 import backgroundTabletRetina from '../../img/bg-images/bg-image-tablet-2x.png';
 import styled from 'styled-components';
-
 import { Currency } from 'components/Currency/Currency';
 
 export const Layout = () => {

@@ -77,7 +77,3 @@ const VaseWrapper = styled.div`
     bottom: 35px;
   }
 `;
-
-// const Test = styled(Reveal)`
-//   animation: all 1.1s 5s both;
-// `;

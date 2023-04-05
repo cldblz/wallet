@@ -26,12 +26,12 @@ import { useState } from 'react';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
-    .email('Пошта має бути робочою, як конячка!')
-    .required('На цю пошту летітимуть голуби з листівками вдачі ;)'),
+    .email('Enter in the format: name@example.com')
+    .required('Please enter an email'),
   password: Yup.string()
-    .min(6, 'Гей! це якось замало, давай хоча б 6 символів введемо')
-    .max(12, 'Ого, це ж тобі не Кобзарик, зупинись на 12 символах')
-    .required("Ну, пароль це обов'язково, інакше ми не спрацюємось"),
+    .min(6, 'Password must be at least 6 characters')
+    .max(12, "Password can't be longer than 12 characters")
+    .required('Please enter a password'),
 });
 
 export const LoginForm = () => {

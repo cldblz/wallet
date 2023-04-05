@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { RxCross2 } from 'react-icons/rx';
 import { useDispatch } from 'react-redux';
 import { signOut } from 'redux/operations';
-// import { toggleModal } from 'redux/Auth/authSlice';
 import { closeModalLogOut } from 'redux/Auth/authSlice';
 
 export const ModalLogoOut = () => {
@@ -13,8 +12,6 @@ export const ModalLogoOut = () => {
     dispatch(closeModalLogOut());
   };
 
-  //   const handleCloseModal = () => {
-  //     dispatch(toggleModal())};
   const onClose = e => {
     if (e.code === 'Escape' || e.currentTarget === e.target) {
       dispatch(closeModalLogOut());
@@ -25,7 +22,6 @@ export const ModalLogoOut = () => {
 
   return (
     <>
-      {/* <Overlay onClick={handleCloseModal}> */}
       <Overlay onClick={onClose}>
         <ModalContainer>
           <ModalBtnClose

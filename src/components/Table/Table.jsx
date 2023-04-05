@@ -154,7 +154,6 @@ const TableContainer = styled.div`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height */
 
   color: #000000;
 `;
@@ -164,7 +163,6 @@ const TableSpan = styled.span`
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-  /* identical to box height */
 
   color: #000000;
 `;

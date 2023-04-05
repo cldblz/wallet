@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import './Loader.css';
-
 import backgroundDesktop from '../../img/bg-images/bg-image-desktop.png';
 import backgroundTablet from '../../img/bg-images/bg-image-tablet.png';
 import backgroundDesktopRetina from '../../img/bg-images/bg-image-desktop-2x.png';
@@ -107,8 +106,6 @@ export const Loader = ({ stat }) => {
   );
 };
 
-// margin-left: calc(100% - 172px)
-// pointer-events: none;
 const LoaderWrap = styled.div`
   background-color: ${props => {
     return props.stat === true ? 'transparent' : '#f1f2f7';

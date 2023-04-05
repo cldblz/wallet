@@ -119,8 +119,6 @@ const ModalAdd = ({ handleSubmitForm }) => {
                   name="transactionDate"
                   value={formattedDate}
                   type="date"
-                  // closeOnSelect={true}
-                  // maxDate={new Date()}
                   input={true}
                   selected={transactionDate}
                   dateFormat="DD-MM-yyyy"
@@ -212,7 +210,6 @@ const StyledSelectField = styled(Field)`
 
 const StyledCommentField = styled(Field)`
   width: 394px;
-  /* height: 30px; */
   margin-bottom: 40px;
   border: none;
   border-bottom: 1px solid #e0e0e0;

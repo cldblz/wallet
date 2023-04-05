@@ -33,35 +33,26 @@ import { handleValidation } from './Validation';
 const validationSchema = yup.object().shape({
   email: yup
     .string()
-    .email('Пошта має бути робочою, як конячка!')
-    .required('На цю пошту летітимуть голуби з листівками вдачі ;)'),
+    .email('Enter in the format: name@example.com')
+    .required('Please enter an email'),
   password: yup
     .string()
-    .matches(
-      /^[a-zA-Z0-9_-]+$/,
-      'Ну, ви ж доросла людина, такого не можна писати'
-    )
-    .min(6, 'Гей! це якось замало, давай хоча б 6 символів введемо')
-    .matches(/[A-Z]+/, 'Додай велику літеру, щоб у нас була довіра')
-    .max(12, 'Ого, це ж тобі не Кобзарик, зупинись на 12 символах')
-    .matches(/\d+/, 'Хоча б одну цифру')
-    .required("Ну, пароль це обов'язково, інакше ми не спрацюємось"),
+    .matches(/^[a-zA-Z0-9_-]+$/, 'Please enter a different password')
+    .min(6, 'Password must be at least 6 characters')
+    .matches(/[A-Z]+/, 'Please add 1 upper case character')
+    .max(12, "Password can't be longer than 12 characters")
+    .matches(/\d+/, 'Please add 1 numeric')
+    .required('Please enter a password'),
   passwordConfirmation: yup
     .string()
-    .oneOf(
-      [yup.ref('password'), null],
-      'Шо, забув що там нафантазував у паролі?'
-    )
-    .required('Шо, забув що там нафантазував у паролі?'),
+    .oneOf([yup.ref('password'), null], "Passwords don't match")
+    .required('Please confirm a password'),
   username: yup
     .string()
-    .matches(
-      /^[a-zA-Z0-9_-]+$/,
-      'Ну, ви ж доросла людина, такого не можна писати'
-    )
-    .min(1, 'Ну, хоч якось тебе кличуть, чи завжди сам приходиш')
-    .max(20, 'Ну, прям УВЕСЬ родовід писати не треба')
-    .required("Мені цікаво дізнатися твоє ім'я"),
+    .matches(/^[a-zA-Z0-9_-]+$/, 'Please enter a different name')
+    .min(1, 'Name must be at least 1 character')
+    .max(20, "Name can't be longer than 20 characters")
+    .required('Please enter a name'),
 });
 
 export const RegistrationForm = () => {

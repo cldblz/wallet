@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { fetchCurrency } from '../../redux/operations';
 import styled from 'styled-components';
-// const currencyIMG = require('../../img/currency-images/currencyIMG.png');
 import Wave from 'react-wavify';
 
 const USD_CURRENCU_CODE = 840;
@@ -60,7 +59,6 @@ export const Currency = () => {
 
   return (
     <TableWrapper>
-      {/* <ImgCurrency src={currencyIMG} alt="img" /> */}
       <TableCurrency>
         <TableHeader>
           <tr>
@@ -110,10 +108,6 @@ export const Wavewrap = styled.div`
 `;
 
 export const TableWrapper = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;  */
   position: relative;
   background: #4a56e2;
   min-width: 280px;
@@ -205,22 +199,15 @@ export const LastUpdate = styled.p`
   position: absolute;
   top: 85%;
   left: 20%;
-  /* padding-top: 20px;
-  padding-right: 10px; */
   font-size: 10px;
   text-align: center;
 
   @media screen and (min-width: 768px) {
     top: 89%;
     left: 27%;
-    /* padding-right: 15px; */
-    /* text-align: center; */
   }
   @media screen and (min-width: 1200px) {
-    /* padding: 82px; */
     left: 18%;
-    /* padding-top: 123px;
-    padding-right: 10px; */
     font-size: 16px;
   }
 `;
